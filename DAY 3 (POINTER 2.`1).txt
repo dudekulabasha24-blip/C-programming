@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+    int numbers  = 10;
+    int *point = &numbers;
+     printf("%d \n",numbers);
+     printf("%d \n", *point);
+    
+    return 0;
+}
