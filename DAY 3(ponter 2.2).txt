@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int number = 10;
+    int *point = &number;
+    int **secondpoint = &point;
+    printf("%d \n", number); // to show the value of var
+    printf("%d \n", point); //to show the address of pointer
+    printf("%d \n", *point);//to show the value of pointer
+    printf("%d \n", secondpoint);// to show the address of second pointer
+    printf("%d \n", **secondpoint);//to show the value of second value
+}
