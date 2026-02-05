@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+void check_road(int N, int adj_matrix[][N], int A, int B) {
+    // Check if there's a direct road
+    if (adj_matrix[A][B] == 1) {
+        printf("Connected\n");
+    } else {
+        printf("Not connected\n");
+    }
+}
+
+int main() {
+    int N;
+    printf("Enter the number of cities: ");
+    scanf("%d", &N);
+
+    int adj_matrix[N][N];
+    printf("Enter the adjacency matrix:\n");
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            scanf("%d", &adj_matrix[i][j]);
+        }
+    }
+
+    int A, B;
+    printf("Enter the city numbers (0-based index): ");
+    scanf("%d %d", &A, &B);
+
+    check_road(N, adj_matrix, A, B);
+
+    return 0;
+}
